@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/BluetoothDiscover.iml" filepath="$PROJECT_DIR$/BluetoothDiscover.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Weighing_Scale_App.iml" filepath="$PROJECT_DIR$/Weighing_Scale_App.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

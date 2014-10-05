@@ -20,7 +20,6 @@ import java.io.IOException;
 *
 * Main Activity file. Class Discover is used to setup the initial interface.
 *
-*
 * */
 
 public class Discover extends Activity {
@@ -86,7 +85,7 @@ public class Discover extends Activity {
 
             dialog = new ProgressDialog(this);
             final SocketListener connector = new SocketListener(BT_Adapter,device, dialog);
-            dialog.show(this, "Establishing Connection", "Connecting to " + device.getName() + " : " + device.getAddress(),
+            dialog.show(this, "Establishing Connection", "Connecting to device " + device.getName() + " : " + device.getAddress(),
                     true, true,
                     new DialogInterface.OnCancelListener() {
 
