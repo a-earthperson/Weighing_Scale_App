@@ -1,16 +1,14 @@
 Weighing_Scale_App
 ==================
-Android application used to connect to bluetooth devices in master/slave mode. Primary application
-involves querying->fetching->parsing data from Bluetooth enabled weighing scales.
+Android application used to connect to bluetooth devices in master/slave mode. Primary application involves querying->fetching->parsing data from Bluetooth enabled weighing scales.
 
-This build provides complete support for :
-* TANITA BC-590BT
+This build provides support for *TANITA BC-590BT*
 
 Building Requirements
 ---------------------
 * Android SDK >= 15.0
 * Bluetooth v2.0 + EDR - SPP support
-*Android wear currently not supported*
+* *Android wear currently not supported*
 
 Current Functionality
 ---------------------
