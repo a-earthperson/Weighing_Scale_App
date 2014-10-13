@@ -18,9 +18,10 @@ import java.io.IOException;
 
 /*
 *
-* Main Activity file. Class Discover is used to setup the initial interface.
+* Main Activity file. Class Discover is used to setup the initial interface, discover new devices
+* and open a server socket connection with a selected device.
 *
-* */
+*/
 
 public class Discover extends Activity {
     public ProgressDialog dialog = null;
@@ -28,7 +29,7 @@ public class Discover extends Activity {
     private static final String UI=null;
 
     String MAC = Constants.MAC;
-    public BluetoothDevice BT_Device = null; // declare virtual device name for 'TANITA BC590-BT'
+    public BluetoothDevice BT_Device = null;
     public BluetoothAdapter BT_Adapter = BluetoothAdapter.getDefaultAdapter();
     private static final int REQUEST_ENABLE_BT = 1;
 
@@ -45,6 +46,7 @@ public class Discover extends Activity {
         }
         console = (TextView) findViewById(R.id.console);
     }
+/* console_dump for debugging */
 
     public void console_dump(String text)
     {
@@ -52,6 +54,8 @@ public class Discover extends Activity {
         Log.d(UI, text);
 
     }
+
+/* Check if BT_Adapter is enabled. Currently, only fetches already paired device from OS. */
     public void discovery(View v)
     {
 
@@ -70,15 +74,15 @@ public class Discover extends Activity {
         }
     }
 
-
+/* openSocket() upon connect() event. */
     public void connect(View view){
         console_dump("Attempting to connect to " + BT_Device.getName());
         console_dump("Going discoverable");
         openSocket(BT_Device);
     }
 
-
-    private void openSocket(BluetoothDevice device) {
+/* init ProgressDialog, open serversocket. close dialog on successful connection. */
+     private void openSocket(BluetoothDevice device) {
         console_dump("Opening Socket...");
 
         try {
@@ -100,7 +104,7 @@ public class Discover extends Activity {
             console_dump("Could not open bluetooth socket");
         }
     }
-
+/*
     private void closeSocket(BluetoothSocket openSocket) {
         try {
             openSocket.close();
@@ -108,7 +112,7 @@ public class Discover extends Activity {
             console_dump("Could not close existing socket");
         }
     }
-
+*/
 
 
 
