@@ -17,22 +17,19 @@ import android.widget.TextView;
 import java.io.IOException;
 
 /*
-*
 * Main Activity file. Class Discover is used to setup the initial interface, discover new devices
 * and open a server socket connection with a selected device.
-*
 */
 
 public class Discover extends Activity {
+
     public ProgressDialog dialog = null;
     public TextView console = null;
     private static final String UI=null;
-
     String MAC = Constants.MAC;
     public BluetoothDevice BT_Device = null;
     public BluetoothAdapter BT_Adapter = BluetoothAdapter.getDefaultAdapter();
     private static final int REQUEST_ENABLE_BT = 1;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,17 +101,6 @@ public class Discover extends Activity {
             console_dump("Could not open bluetooth socket");
         }
     }
-/*
-    private void closeSocket(BluetoothSocket openSocket) {
-        try {
-            openSocket.close();
-        } catch (IOException ex) {
-            console_dump("Could not close existing socket");
-        }
-    }
-*/
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
